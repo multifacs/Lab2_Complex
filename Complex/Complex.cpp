@@ -23,6 +23,9 @@ namespace complexnumbers {
 
 	const Complex &Complex::operator=(const Complex &other)
 	{
+		if (&other == this)
+			return *this;
+
 		re = other.re;
 		im = other.im;
 
